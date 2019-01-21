@@ -34,7 +34,7 @@ $(function () {
                 validateInputValue(input);
             } else {
                 min = 3;
-                validateInputValue(input, `Måste bestå av ${min} antal siffror`, min);
+                validateInputValue(input, `Måste bestå av 1-3 antal siffror`, min);
             }
         }
 

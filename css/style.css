@@ -62,6 +62,40 @@ fieldset {
     border: none;
 }
 
+.form-control:focus {
+    color: #495057;
+    background-color: #ffffff;
+    border-color: #ff6d70;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
+}
+
+.custom-select:focus {
+    border-color:#ff6d70;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #ffffff;
+    border-color:#ff6d70;
+    background-color:#ff6d70;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #ff6d70;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    color:#ffffff;
+    background-color:#ff6d70;
+    border-color:#ff6d70;
+}
+
 .btn-color2019 {
     color: #ffffff;
     background-color: #ff6f61;

@@ -21,7 +21,7 @@
                     <h4 class="mb-5"><span>Registrering</span></h4>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="firstName">Förnamn</label>
+                            <label for="firstName">Förnamn:</label>
                             <input id="firstName" type="text" class="form-control" placeholder="Ange ditt förnamn"
                                 required>
                             <div id="firstName-invalid-feedback" class="invalid-feedback">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="lastName">Efternamn</label>
+                            <label for="lastName">Efternamn:</label>
                             <input id="lastName" type="text" class="form-control" placeholder="Ange ditt efternamn"
                                 required>
                             <div id="lastName-invalid-feedback" class="invalid-feedback">
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="email">E-postadress</label>
+                        <label for="email">E-postadress:</label>
                         <div class="input-group">
                             <input id="email" type="email" class="form-control" placeholder="Ange din e-postadress"
                                 required>
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="password">Lösenord</label>
+                        <label for="password">Lösenord:</label>
                         <div class="input-group">
                             <input id="password" type="password" class="form-control" placeholder="Ange ett lösenord"
                                 required>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="confirmPassword">Bekräfta Lösenord</label>
+                        <label for="confirmPassword">Bekräfta Lösenord:</label>
                         <div class="input-group">
                             <input id="confirmPassword" data-comparewith="#password" type="password" class="form-control"
                                 placeholder="Ange lösenordet igen" required>
@@ -76,7 +76,7 @@
                     <div id="postalAddress" class="mt-5">
                         <h4 class="mb-5"><span>Personlig information</span></h4>
                         <div class="mb-3">
-                            <label for="postalAddress">Adress</label>
+                            <label for="postalAddress">Adress:</label>
                             <div class="input-group">
                                 <input id="postalAddress" type="text" class="form-control" placeholder="Ange din adress"
                                     required>
@@ -88,7 +88,7 @@
 
                         <div class="row">
                             <div class="col-md-3 mb-3">
-                                <label for="age">Ålder</label>
+                                <label for="age">Ålder:</label>
                                 <input id="age" type="text" class="form-control" placeholder="Ange ålder" maxlength="3"
                                     required>
                                 <div id="age-invalid-feedback" class="invalid-feedback">
@@ -97,7 +97,7 @@
                             </div>
 
                             <div class="col-md-9 mb3">
-                                <label for="gender">Kön</label>
+                                <label for="gender">Kön:</label>
                                 <select id="gender" class="custom-select d-block w-100" required>
                                     <option value="">Ange kön...</option>
                                     <option value="Man">Man</option>
@@ -111,29 +111,25 @@
                         </div>
 
                         <div class="row">
-                            <label class="col-md-3 mb-3">Sysselsättning</label>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="occupation" id="employed" value="option1">
-                                    <label class="form-check-label" for="occupation">
-                                        Arbetande
-                                    </label>
+                            <div id="occupation" class="col-md-3 mb-3">
+                                <label for="occupation">Sysselsättning:</label>
+                                <div class="custom-control custom-radio">
+                                    <input id="employed" type="radio" name="occupation" class="custom-control-input"
+                                        required>
+                                    <label for="employed" class="custom-control-label">Arbetande</label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="occupation" id="student" value="option2">
-                                    <label class="form-check-label" for="occupation">
-                                        Studerande
-                                    </label>
+                                <div class="custom-control custom-radio">
+                                    <input id="student" type="radio" name="occupation" class="custom-control-input"
+                                        required>
+                                    <label for="student" class="custom-control-label">Studerande</label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="occupation" id="unemployed"
-                                        value="option3">
-                                    <label class="form-check-label" for="occupation">
-                                        Arbetslös
-                                    </label>
+                                <div class="custom-control custom-radio">
+                                    <input id="unemployed" type="radio" name="occupation" class="custom-control-input"
+                                        required>
+                                    <label for="unemployed" class="custom-control-label">Arbetslös</label>
                                 </div>
                                 <div id="occupation-invalid-feedback" class="invalid-feedback">
-                                    Du måste välja sysselsättning.
+                                    Du måste ange din Sysselsättning.
                                 </div>
                             </div>
                         </div>
@@ -144,7 +140,7 @@
                     <h4 class="mb-5"><span>Övrigt</span></h4>
 
                     <div class="row">
-                        <label class="col-md-9 mb-3">Feedback på registeringen</label>
+                        <label class="col-md-9 mb-3">Feedback på registreringen:</label>
                         <textarea class="form-control mb-3" id="registerFeedback" rows="4" placeholder="Lämna gärna feedback på vad du tyckte om våran registering. Detta fält är frivilligt."></textarea>
                     </div>
 
