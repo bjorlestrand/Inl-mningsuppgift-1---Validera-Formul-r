@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inlämningsuppgift 1 - Validera Formulär</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <!-- main form content -->
+            <div class="col-md-20 order-md-2">
+                <form class="needs-validation" novalidate>
+                    <h4 class="mb-5"><span>Registrering</span></h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Förnamn</label>
+                            <input id="firstName" type="text" class="form-control" placeholder="Ange ditt förnamn"
+                                required>
+                            <div id="firstName-invalid-feedback" class="invalid-feedback">
+                                Du måste ange ett förnamn, måste minst vara 2 tecken långt.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Efternamn</label>
+                            <input id="lastName" type="text" class="form-control" placeholder="Ange ditt efternamn"
+                                required>
+                            <div id="lastName-invalid-feedback" class="invalid-feedback">
+                                Du måste ange ett efternamn, måste minst vara 2 tecken långt.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">E-postadress</label>
+                        <div class="input-group">
+                            <input id="email" type="email" class="form-control" placeholder="Ange din e-postadress"
+                                required>
+                            <div id="email-invalid-feedback" class="invalid-feedback">
+                                Du måste ange en giltig e-postadress.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password">Lösenord</label>
+                        <div class="input-group">
+                            <input id="password" type="password" class="form-control" placeholder="Ange ett lösenord"
+                                required>
+                            <div id="password-invalid-feedback" class="invalid-feedback">
+                                Du måste ange ett lösenord som är minst 8 tecken.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword">Bekräfta Lösenord</label>
+                        <div class="input-group">
+                            <input id="confirmPassword" data-comparewith="#password" type="password" class="form-control"
+                                placeholder="Ange lösenordet igen" required>
+                            <div id="confirmPassword-invalid-feedback" class="invalid-feedback">
+                                Du måste bekräfta lösenordet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+
+
+                    <div id="postalAddress" class="mt-5">
+                        <h4 class="mb-5"><span>Personlig information</span></h4>
+                        <div class="mb-3">
+                            <label for="postalAddress">Adress</label>
+                            <div class="input-group">
+                                <input id="postalAddress" type="text" class="form-control" placeholder="Ange din adress"
+                                    required>
+                                <div id="postalAddress-invalid-feedback" class="invalid-feedback">
+                                    Du måste ange en adress.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="age">Ålder</label>
+                                <input id="age" type="text" class="form-control" placeholder="Ange ålder" maxlength="3"
+                                    required>
+                                <div id="age-invalid-feedback" class="invalid-feedback">
+                                    Du måste ange din ålder.
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 mb3">
+                                <label for="gender">Kön</label>
+                                <select id="gender" class="custom-select d-block w-100" required>
+                                    <option value="">Ange kön...</option>
+                                    <option value="Man">Man</option>
+                                    <option value="Kvinna">Kvinna</option>
+                                    <option value="Annat">Annat</option>
+                                </select>
+                                <div id="gender-invalid-feedback" class="invalid-feedback">
+                                    Du måste ange ditt kön.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label class="col-md-3 mb-3">Sysselsättning</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="occupation" id="employed" value="option1">
+                                    <label class="form-check-label" for="occupation">
+                                        Arbetande
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="occupation" id="student" value="option2">
+                                    <label class="form-check-label" for="occupation">
+                                        Studerande
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="occupation" id="unemployed"
+                                        value="option3">
+                                    <label class="form-check-label" for="occupation">
+                                        Arbetslös
+                                    </label>
+                                </div>
+                                <div id="occupation-invalid-feedback" class="invalid-feedback">
+                                    Du måste välja sysselsättning.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+
+                    <h4 class="mb-5"><span>Övrigt</span></h4>
+
+                    <div class="row">
+                        <label class="col-md-9 mb-3">Feedback på registeringen</label>
+                        <textarea class="form-control mb-3" id="registerFeedback" rows="4" placeholder="Lämna gärna feedback på vad du tyckte om våran registering. Detta fält är frivilligt."></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-check mb-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="news">
+                                <label class="form-check-label" for="news">
+                                    Klicka i om du vill ha vårat nyhetsbrev
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-check mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    Godkänn allmänna villkor
+                                </label>
+                            </div>
+                            <div id="terms-invalid-feedback" class="invalid-feedback">
+                                Du måste godkänna innan registrering.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-color2019 btn-lg btn-block">Slutför registrering</button>
+
+            </div>
+            </form>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="js/validate.js"></script>
+</body>
+
+</html>
